@@ -5,7 +5,7 @@ Console().clear()
 
 nombre = questionary.text("¿Cual es tu nombre", default="Miguel").ask()
 
-#Preguntas de selceccion multiple
+#Preguntas de selccion multiple
 color = questionary.select("¿Cual es tu color favorito?", choices= ["Rojo", "Verde", "Azul", "Otro"],pointer="*").ask()
 
 print(f"Hola, {nombre}! Tu color favorito es {color}.")
