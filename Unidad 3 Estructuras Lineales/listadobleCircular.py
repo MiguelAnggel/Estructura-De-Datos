@@ -1,4 +1,5 @@
 from listaDoble import ListaDoble
+from nodoDoble import NodoDoble
 
 class ListaDobleCircular(ListaDoble):
     def __init__(self):
@@ -65,3 +66,40 @@ class ListaDobleCircular(ListaDoble):
             self.cabeza.anterior = self.cola
         self.tamanio -= 1
         return True
+    
+    def agregar(self, valor, posicion): # FIXME
+        if posicion < 0 or posicion > self.tamanio:
+            return False
+        if posicion == 0:
+            self.agregar_inicio(valor)
+        elif posicion == self.tamanio:
+            self.agregar_final(valor)
+        else:
+            nuevo = NodoDoble(valor)
+            actual = self.cabeza
+            for _ in range(posicion):
+                actual = actual.siguiente
+            nuevo.anterior = actual.anterior
+            nuevo.siguiente = actual
+            actual.anterior.siguiente = nuevo
+            actual.anterior = nuevo
+            self.tamanio += 1
+            return True
+        
+    def eliminar(self, posicion):
+        if posicion < 0 or posicion >= self.tamanio:
+            return False
+        if posicion == 0:
+            return self.eliminar_inicio()
+        elif posicion == self.tamanio -1 :
+            return self.eliminar_final()
+        else:
+            actual = self.cabeza
+            for _ in range(posicion):
+                actual = actual.siguiente
+            actual.anterior.siguiente = actual.siguiente
+            actual.siguiente.anterior = actual.anterior
+            self.tamanio -= 1
+            return True
+
+

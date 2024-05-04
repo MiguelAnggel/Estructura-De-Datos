@@ -47,4 +47,19 @@ class ListaSimple:
                 return True
             actual = actual.siguiente
         return False 
+    
+    def eliminar_final(self):
+        if self.cola is None: #Revisamos si la cola de la lista esta vacia
+            return False
         
+        penultimo = None #El nodo anterior lo ponemos como ninguno
+        actual = self.cabeza
+        while actual :
+            if actual == self.cola:
+                break
+            penultimo = actual
+            actual = actual.siguiente
+
+        self.cola = penultimo
+        self.cola.siguiente = None
+        self.tamanio -= 1 #Le bajamos el tamaño
