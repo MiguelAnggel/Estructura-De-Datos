@@ -1,4 +1,4 @@
-from listaDoble import ListaDoble
+from lista_doble import ListaDoble
 
 class Cola(ListaDoble):
     def __init__(self):

@@ -1,4 +1,4 @@
-from nodoDoble import NodoDoble
+from nodo_doble import NodoDoble
 
 class ListaDoble:
     def __init__(self):

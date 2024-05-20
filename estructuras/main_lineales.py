@@ -1,7 +1,7 @@
 from nodo import Nodo
 from lista_simple import ListaSimple
-from listaDoble import ListaDoble
-from listadobleCircular import ListaDobleCircular as ListaCircular #Le ponemos un alias corto
+from lista_doble import ListaDoble
+from lista_doble_circular import ListaDobleCircular as ListaCircular #Le ponemos un alias corto
 from pila import Pila
 from cola import Cola
 

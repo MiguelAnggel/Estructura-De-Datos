@@ -1,5 +1,5 @@
-from listaDoble import ListaDoble
-from nodoDoble import NodoDoble
+from lista_doble import ListaDoble
+from nodo_doble import NodoDoble
 
 class ListaDobleCircular(ListaDoble):
     def __init__(self):
