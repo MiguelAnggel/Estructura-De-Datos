@@ -1,7 +1,7 @@
 # Repositorio de Estructura De Datos
 
 #### Autor: 
-[MiguelAnggel](https://github.com/MiguelAnggel)
+[migueeldev](https://github.com/migueeldev)
 
 
 ### Temario desarrollado:
